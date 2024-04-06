@@ -1,0 +1,8 @@
+<div class="container mt-5">
+  <h1>Your Score</h1>
+  <p>You submitted: <%= @word %></p>
+  <p>Your score for this round: <%= @word.length %></p>
+  <p class="score-display">Your total score: <%= @total_score %></p>
+
+  <%= link_to 'Play Again', new_path, class: 'btn btn-success' %>
+</div>

@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  <div class="custom-header">New Game</div>
+  <p class="letter-grid"><%= @letters.join(' ') %></p>
+
+  <%= form_with url: '/score', method: :post, data: { turbo: false }, class: "word-input" do |form| %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= form.text_field :word, class: 'form-control' %>
+    <%= form.submit "Submit", class: 'btn btn-primary mt-2' %>
+  <% end %>
+</div>
