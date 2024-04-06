@@ -1,8 +1,16 @@
-<div class="container mt-5">
-  <h1>Your Score</h1>
-  <p>You submitted: <%= @word %></p>
-  <p>Your score for this round: <%= @word.length %></p>
-  <p class="score-display">Your total score: <%= @total_score %></p>
+<div class="container mt-4">
+  <h1>Game Result</h1>
 
-  <%= link_to 'Play Again', new_path, class: 'btn btn-success' %>
+  <% if @word.present? %>
+    <p>You submitted: <strong><%= @word %></strong></p>
+  <% end %>
+
+  <% if @result.present? %>
+    <p><%= @result %></p>
+  <% end %>
+
+  <p>Your total score: <strong><%= @total_score %></strong></p>
+
+  <%= link_to 'Try again', new_path, class: 'btn btn-primary' %>
+  <%= link_to 'Reset Score', reset_path, class: 'btn btn-danger' %>
 </div>

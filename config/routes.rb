@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'new', to: 'games#new', as: 'new'
   post 'score', to: 'games#score'
   get 'reset', to: 'games#reset', as: 'reset'
+  get 'result', to: 'games#result', as: 'result'
   get 'games/new'
   get 'games/score'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
